@@ -1,0 +1,39 @@
+name: Unit Test (Java)
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - 'release/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: java
+
+    strategy:
+      matrix:
+        java-version:
+          - 21
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Java ${{ matrix.java-version }}
+        uses: actions/setup-java@v4
+        with:
+          # @see https://github.com/actions/setup-java?tab=readme-ov-file#supported-distributions
+          distribution: 'corretto'
+          java-version: ${{ matrix.java-version }}
+
+      - name: Run Unit Test
+        run: ./gradlew test
