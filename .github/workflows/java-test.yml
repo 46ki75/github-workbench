@@ -2,11 +2,15 @@ name: Unit Test (Java)
 
 on:
   push:
+    paths:
+      - 'java/**'
   pull_request:
     branches:
       - main
       - develop
       - 'release/**'
+    paths:
+      - 'java/**'
   workflow_dispatch:
 
 jobs:
