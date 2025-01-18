@@ -11,3 +11,9 @@ updates:
     schedule:
       interval: 'daily'
     target-branch: 'main'
+
+  - package-ecosystem: 'cargo'
+    directory: '/crates'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
