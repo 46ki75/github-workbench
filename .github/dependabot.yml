@@ -5,15 +5,21 @@ updates:
     schedule:
       interval: 'daily'
     target-branch: 'main'
+    reviewers:
+      - '46ki75'
 
   - package-ecosystem: 'maven'
     directory: '/java'
     schedule:
       interval: 'daily'
     target-branch: 'main'
+    reviewers:
+      - '46ki75'
 
   - package-ecosystem: 'cargo'
     directory: '/crates'
     schedule:
       interval: 'daily'
     target-branch: 'main'
+    reviewers:
+      - '46ki75'
