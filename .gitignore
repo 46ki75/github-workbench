@@ -3,3 +3,6 @@ dist/
 
 # Rust
 target/
+
+# go
+go/**/bin/
