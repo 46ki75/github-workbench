@@ -23,3 +23,11 @@ updates:
     target-branch: 'main'
     reviewers:
       - '46ki75'
+
+  - package-ecosystem: 'gomod'
+    directory: '/go'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    reviewers:
+      - '46ki75'
